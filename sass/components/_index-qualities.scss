@@ -1,0 +1,42 @@
+.qualities {
+    padding-top: 97px;
+    padding-bottom: 91px;
+    & h2 {
+        display: none;
+    }
+}
+
+.qualities__list {
+    display: flex;
+    justify-content: space-between;
+    & li {
+        width: 270px;
+    }
+    & svg {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.qualities__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    background-color: $secondary-background-color;
+    margin-bottom: 30px;
+    transition: box-shadow $cubic-standard;
+    .qualities__list li:hover & {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.qualities__heading {
+    @include font-set ($font-weight: 700, $line-height: 14px, $text-align: left, $letter-spacing: 0.03em, $color: $main-text-color, $transform: uppercase);
+    padding-bottom: 10px;
+}
+
+.qualities__text {
+    @include font-set ($line-height: 24px, $text-align: left, $letter-spacing: 0.03em, $color: $secondary-text-color);
+}

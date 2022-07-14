@@ -1,0 +1,151 @@
+footer {
+    background: $main-text-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__container {
+    display: flex;
+}
+
+.contact-details {
+    padding-top: 20px;
+    & li:nth-child(n+2) {
+        padding-top: 9px;
+    }
+}
+
+.contact-details__communication {
+    @include font-set ($line-height: 24px, $color: rgba(255, 255, 255, 0.6));
+    text-decoration: none;
+    transition: color $cubic-standard;
+    &:hover, &:focus {
+        color: $active-color;
+    }
+}
+
+
+.contact-details__address {
+    @include font-set ($line-height: 24px, $color: $main-color);
+    text-decoration: none;
+    transition: color $cubic-standard;
+    &:hover, 
+    &:focus {
+        color: $active-color;
+    }
+}
+
+.footer-networks__container {
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 70px;
+}
+
+.footer-networks__heading {
+    @include font-set ($font-weight: 700, $text-align: left, $transform: uppercase);
+}
+
+.footer-network__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    height: 44px;
+    justify-content: center;
+}
+
+.footer-network__list li {
+    margin: 0px;
+    padding: 0;
+    height: 20px;
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.footer-network__icon {
+    width: 20px;
+    height: 20px;
+    height: 20px;
+    fill: $main-color;
+}
+
+.footer-network__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid;
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+    background-color: rgba(255, 255, 255, 0.10);
+    transition: background-color $cubic-standard;
+    &:hover, &:focus  {
+        background-color: $active-color;
+        cursor: pointer;
+    }
+}
+
+.footer-form {
+    display: inline-block;
+    width: 570px;
+    margin-top: 12px;
+    margin-left: auto;
+}
+
+.footer-form__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-form__heading {
+    @include font-set ($font-weight: 700, $text-align: left, $transform: uppercase);
+    margin-bottom: 20px;
+}
+
+.footer-form__submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 200px;
+    border-radius: 4px;
+    background-color: $active-color;
+    color: $main-color;
+    @include font-set ($font-weight: 700, $font-size: 16px, $line-height: 30px, $letter-spacing: 0.06em);    
+    cursor: pointer;
+    border: none;
+    transition: box-shadow $cubic-standard;
+    &:hover, &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+    &::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        box-sizing: border-box;
+        margin-left: 10px;
+        background-image: url(../images/icon-send.svg);
+        background-size: contain;
+    }
+}
+
+#footer-form__mail {
+    display: inline-block;
+    width: 358px;
+    background-color: $main-text-color;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    @include font-set ($font-size: 16px, $line-height: 20px, $text-align: left);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 15px;
+    transition: border-color $cubic-standard;
+    &:hover {
+        border-color: $active-color;
+    }
+    .footer-form__input-focus:focus-within & {
+        border-color: $active-color;
+    }
+}

@@ -1,0 +1,99 @@
+header {
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    align-self: auto;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.navigation__list {
+    display: inline-block;
+    & > li {
+        display: inline-block;
+    }
+    & > li:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.navigation__link--inactive, .navigation__link--active  {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    @include font-set ($font-weight: 500, $letter-spacing: 0.02em, $color: $main-text-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.navigation__link--inactive {
+    text-decoration: none;
+    color:$main-text-color;
+    transition: color $cubic-standard;    
+    &:hover, &:focus {
+        color: $active-color;
+    }
+}
+
+.navigation__link--active {
+    color:$active-color;
+    &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color:$active-color;
+        left: 0;
+        bottom: 0;
+        border-radius: 2px;
+        margin-bottom: -1px;
+    }
+}
+
+.contacts {
+    display: flex;
+    & li:last-child {
+        margin-left: 30px;
+    }
+}
+
+.contacts__icon {
+    fill: $secondary-text-color;
+    margin-right: 10px;
+    transition: fill $cubic-standard;
+    .contacts__link:hover & {
+        fill: $active-color;
+    }
+    .contacts__link:focus & {
+        fill: $active-color;
+    }
+}
+.contacts__icon--mailing {
+    width: 16px;
+    height: 12px;
+}
+
+.contacts__icon--calling {
+    width: 10px;
+    height: 16px;
+}
+
+.contacts__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    @include font-set ($font-weight: 500, $text-align: center, $letter-spacing: 0.02em, $color: $secondary-text-color);
+    transition: color $cubic-standard;
+    &:hover, &:focus {
+        color: $active-color;
+    }
+}
