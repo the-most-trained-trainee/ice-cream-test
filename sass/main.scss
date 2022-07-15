@@ -1,37 +1,48 @@
-ul, li, h1, h2, h3, h4, p, img {
-    padding: 0;
-    margin: 0;
-    border: 0;
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+p,
+img {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
-.container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+body {
+  background-color: #FFB8CA;
 }
 
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+.hero__buynow-button {
+  display: inline-flex;
+  justify-content: center;
+  height: 24px;
+  border: 0;
+  border-radius: 20px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+  background-color: #FFFFFF;
+  color: #D41443;
+  width: 83px;
 }
+
+
+
+
+
 
 @import "./utils/variables";
-@import "./components/logo";
-@import "./components/page-header";
-@import "./components/page-footer";
 @import "./components/index-hero";
-@import "./components/index-qualities";
-@import "./components/index-we-do";
-@import "./components/index-team";
-@import "./components/index-clients";
-@import "./components/portfolio";
-
-.section-header {
-    @include font-set ($font-weight: 700, $font-size: 36px, $line-height: 42px, $color: $main-text-color);
-}
